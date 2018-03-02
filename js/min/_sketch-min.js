@@ -1,0 +1,1 @@
+function setup(){createCanvas(windowWidth,windowHeight,WEBGL),scl=50,col=300/scl,row=300/scl}function draw(){background(0),stroke(0)}var col,row,scl;

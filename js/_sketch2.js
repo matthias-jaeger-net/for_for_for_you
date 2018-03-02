@@ -1,7 +1,7 @@
 // ___________ for(for(for(you))) _________________
-//
+// 
 // This is a 3D Javascript, WEBGL, P5.js thing, that
-// I made for you to enjoy. I hope using it is as
+// I made for you to enjoy. I hope using it is as 
 // much fun as making it. :-)
 
 var grid; // Create a variable to hold the grid
@@ -12,20 +12,21 @@ function setup() {
 }
 
 function draw() {
+  background( 0, 0, 255, 0 ); // white transparent bg
   camera( 0, 0, sin( frameCount * 0.01 ) * 600 ); // animate view
-  ambientLight( 0 ); // all spheres black
+  ambientLight( 10 ); // all spheres black
   rotateX(  mouseX  * 0.001 ); // custom orbit like effect
   rotateY(  mouseY  * 0.001 );
   grid.render(); // render the grid
 }
 
-function Grid( _cnt, _spacing, _size ) { // a small constructor
+function Grid( _cnt, _spacing, _size ) { // a small constructor 
   this.cnt = _cnt; // from -cnt to +cnt+1 to get all centered
-  this.spa = _spacing;
+  this.spa = _spacing; 
   this.size = _size;
   this.render = function() {
     this.off = dist( mouseX, mouseY, 0, 0) * 0.2; // scale effect
-    for ( var x = -this.cnt; x < this.cnt+1; x++ ) { // magic grid
+    for ( var x = -this.cnt; x < this.cnt+1; x++ ) { // magic grid 
       for ( var y = -this.cnt; y < this.cnt+1; y++ ) {
         for ( var z = -this.cnt; z < this.cnt+1; z++ ) {
           push();
